@@ -1,0 +1,4 @@
+/Users/michal-mik/Projects/agpt-xenon/build/CMakeFiles/ALL_BUILD.dir
+/Users/michal-mik/Projects/agpt-xenon/build/CMakeFiles/ZERO_CHECK.dir
+/Users/michal-mik/Projects/agpt-xenon/build/engine/CMakeFiles/xenon_engine.dir
+/Users/michal-mik/Projects/agpt-xenon/build/game/CMakeFiles/xenon_game.dir

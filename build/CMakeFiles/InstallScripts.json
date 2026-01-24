@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/michal-mik/Projects/agpt-xenon/build/cmake_install.cmake",
+		"/Users/michal-mik/Projects/agpt-xenon/build/engine/cmake_install.cmake",
+		"/Users/michal-mik/Projects/agpt-xenon/build/game/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,1129 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		0064144DF62DC8C072E514F9 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A104F045AA32418F9E7B8827 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				A8092E9A3CD5257728B98AFD /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		C86DBD2D9D74201DA2DB5F0A /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 9A109530A86741BDACD62CD1 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				FCCA0ADF1A1A8E71F9EC48CA /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				306A84D33A1143E392F51DE4 /* PBXTargetDependency */,
+				36A66B4624CE42489A9E0199 /* PBXTargetDependency */,
+				6957685C519B40F5A53497FD /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0AD2F72FBFAB4C7FBA3175BA /* ShipPawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FF782D11D4DD49C49181357E /* ShipPawn.cpp */; };
+		911FFF4AEE454C46BB50242C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69AF074812084952A60E021E /* main.cpp */; };
+		96F5C8E1842D4ADF9C0EA20B /* Engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74A1F10810C84A318178A4F2 /* Engine.cpp */; };
+		BFAA197F99C94917A2B1C182 /* XenonGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A4403759F2744E1BB7AD1DFF /* XenonGame.cpp */; };
+		FF431145ECCA40248D011838 /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4541A1E38F4D453ABCF4E970 /* TextureManager.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F0B79962C274E1C97B0E1C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54436266C54E4199B910D170 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3F1F25A9F30E7DF13E693E9;
+			remoteInfo = xenon_game;
+		};
+		476DAB2C595042D78CEFAF8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54436266C54E4199B910D170 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0064144DF62DC8C072E514F9;
+			remoteInfo = ZERO_CHECK;
+		};
+		579DA8C2E9E54A7982B57322 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54436266C54E4199B910D170 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE4D801B596A10BF205FFA08;
+			remoteInfo = xenon_engine;
+		};
+		C191E5A56146473BABDA6354 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54436266C54E4199B910D170 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE4D801B596A10BF205FFA08;
+			remoteInfo = xenon_engine;
+		};
+		DAC7FD2A2FA44BDD901EB649 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54436266C54E4199B910D170 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0064144DF62DC8C072E514F9;
+			remoteInfo = ZERO_CHECK;
+		};
+		FCE63847BF09442FB68C3990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 54436266C54E4199B910D170 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0064144DF62DC8C072E514F9;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		08800815E337441E82B325D6 /* libxenon_engine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libxenon_engine.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D1FDD7106A14D688275D872 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = game/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2E0BAB1AC70B4860A2DBD647 /* SDL3.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = SDL3.framework; path = /Library/Frameworks/SDL3.framework; sourceTree = "<absolute>"; };
+		4541A1E38F4D453ABCF4E970 /* TextureManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = TextureManager.cpp; path = engine/src/TextureManager.cpp; sourceTree = SOURCE_ROOT; };
+		69AF074812084952A60E021E /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = game/src/main.cpp; sourceTree = SOURCE_ROOT; };
+		74A1F10810C84A318178A4F2 /* Engine.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = Engine.cpp; path = engine/src/Engine.cpp; sourceTree = SOURCE_ROOT; };
+		7BE81CADFEC04BD49C135C69 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = engine/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A4403759F2744E1BB7AD1DFF /* XenonGame.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = XenonGame.cpp; path = game/src/XenonGame.cpp; sourceTree = SOURCE_ROOT; };
+		A5DEBC62BAA14019B2767E31 /* xenon_game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = xenon_game; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED1825EE416E4A34A3B1C349 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FF782D11D4DD49C49181357E /* ShipPawn.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ShipPawn.cpp; path = game/src/ShipPawn.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1EB280851E9D4BA49B0B168B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC7796E1799245C7BC743250 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		023E1CB5752A4723BE3D37F9 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				E7CAEBA798E648D38E6EDFFE /* CMake Rules */,
+				ED1825EE416E4A34A3B1C349 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		48B2BADC58414C50981A109C /* xenon_engine */ = {
+			isa = PBXGroup;
+			children = (
+				8D50506BF88B4544A4FB2369 /* Source Files */,
+				7BE81CADFEC04BD49C135C69 /* CMakeLists.txt */,
+			);
+			name = xenon_engine;
+			sourceTree = "<group>";
+		};
+		5637032AEBCF418B92E2AE94 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF782D11D4DD49C49181357E /* ShipPawn.cpp */,
+				A4403759F2744E1BB7AD1DFF /* XenonGame.cpp */,
+				69AF074812084952A60E021E /* main.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		69DAED1474DF4F98BAC84DBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E0BAB1AC70B4860A2DBD647 /* SDL3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D50506BF88B4544A4FB2369 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				74A1F10810C84A318178A4F2 /* Engine.cpp */,
+				4541A1E38F4D453ABCF4E970 /* TextureManager.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		A55E420EDC73467D89A17B0F = {
+			isa = PBXGroup;
+			children = (
+				023E1CB5752A4723BE3D37F9 /* ALL_BUILD */,
+				48B2BADC58414C50981A109C /* xenon_engine */,
+				EEA8243B81A840909C10A17E /* xenon_game */,
+				C5B16FA6529E4AFBB7416EC8 /* Products */,
+				69DAED1474DF4F98BAC84DBC /* Frameworks */,
+				FBA0D632A4AA4C4ABE687390 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		C5B16FA6529E4AFBB7416EC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				08800815E337441E82B325D6 /* libxenon_engine.a */,
+				A5DEBC62BAA14019B2767E31 /* xenon_game */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7CAEBA798E648D38E6EDFFE /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		EEA8243B81A840909C10A17E /* xenon_game */ = {
+			isa = PBXGroup;
+			children = (
+				0D1FDD7106A14D688275D872 /* CMakeLists.txt */,
+				5637032AEBCF418B92E2AE94 /* Source Files */,
+			);
+			name = xenon_game;
+			sourceTree = "<group>";
+		};
+		FBA0D632A4AA4C4ABE687390 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E3F1F25A9F30E7DF13E693E9 /* xenon_game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43568F5CFBD540DA94D5359F /* Build configuration list for PBXNativeTarget "xenon_game" */;
+			buildPhases = (
+				CAD640054A7349C79AE96FDB /* Sources */,
+				AC7796E1799245C7BC743250 /* Frameworks */,
+				3D0A931A35D77E678CA8B739 /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59111FE4564143E6AB81B182 /* PBXTargetDependency */,
+				11A7CA0BF93C4330B729ACDE /* PBXTargetDependency */,
+			);
+			name = xenon_game;
+			productName = xenon_game;
+			productReference = A5DEBC62BAA14019B2767E31 /* xenon_game */;
+			productType = "com.apple.product-type.tool";
+		};
+		FE4D801B596A10BF205FFA08 /* xenon_engine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F41497E49F94C4E83E5CE26 /* Build configuration list for PBXNativeTarget "xenon_engine" */;
+			buildPhases = (
+				A1F5074327804417ACBCD07A /* Sources */,
+				1EB280851E9D4BA49B0B168B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C4DF4AC5C4B4A75A058DFD7 /* PBXTargetDependency */,
+			);
+			name = xenon_engine;
+			productName = xenon_engine;
+			productReference = 08800815E337441E82B325D6 /* libxenon_engine.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		54436266C54E4199B910D170 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 2610;
+			};
+			buildConfigurationList = 281D53F0042E4F4A878BA1B9 /* Build configuration list for PBXProject "AGPT_Project1" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A55E420EDC73467D89A17B0F;
+			projectDirPath = "/Users/michal-mik/Projects/agpt-xenon";
+			projectRoot = "";
+			targets = (
+				C86DBD2D9D74201DA2DB5F0A /* ALL_BUILD */,
+				FE4D801B596A10BF205FFA08 /* xenon_engine */,
+				E3F1F25A9F30E7DF13E693E9 /* xenon_game */,
+				0064144DF62DC8C072E514F9 /* ZERO_CHECK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D0A931A35D77E678CA8B739 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/michal-mik/Projects/agpt-xenon/build/game\n  /opt/homebrew/bin/cmake -E copy_directory /Users/michal-mik/Projects/agpt-xenon/graphics /Users/michal-mik/Projects/agpt-xenon/build/game/Debug/graphics\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/michal-mik/Projects/agpt-xenon/build/game\n  /opt/homebrew/bin/cmake -E copy_directory /Users/michal-mik/Projects/agpt-xenon/graphics /Users/michal-mik/Projects/agpt-xenon/build/game/Release/graphics\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/michal-mik/Projects/agpt-xenon/build/game\n  /opt/homebrew/bin/cmake -E copy_directory /Users/michal-mik/Projects/agpt-xenon/graphics /Users/michal-mik/Projects/agpt-xenon/build/game/MinSizeRel/graphics\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/michal-mik/Projects/agpt-xenon/build/game\n  /opt/homebrew/bin/cmake -E copy_directory /Users/michal-mik/Projects/agpt-xenon/graphics /Users/michal-mik/Projects/agpt-xenon/build/game/RelWithDebInfo/graphics\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A8092E9A3CD5257728B98AFD /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+				"/Users/michal-mik/Projects/agpt-xenon/build/CMakeFiles/ZERO_CHECK",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/michal-mik/Projects/agpt-xenon/build\n  make -f /Users/michal-mik/Projects/agpt-xenon/build/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/michal-mik/Projects/agpt-xenon/build\n  make -f /Users/michal-mik/Projects/agpt-xenon/build/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/michal-mik/Projects/agpt-xenon/build\n  make -f /Users/michal-mik/Projects/agpt-xenon/build/CMakeScripts/ReRunCMake.make\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/michal-mik/Projects/agpt-xenon/build\n  make -f /Users/michal-mik/Projects/agpt-xenon/build/CMakeScripts/ReRunCMake.make\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FCCA0ADF1A1A8E71F9EC48CA /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+				"/Users/michal-mik/Projects/agpt-xenon/build/CMakeFiles/ALL_BUILD",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif test \"$CONFIGURATION\" = \"Debug\"; then :\n  cd /Users/michal-mik/Projects/agpt-xenon/build\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"Release\"; then :\n  cd /Users/michal-mik/Projects/agpt-xenon/build\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"MinSizeRel\"; then :\n  cd /Users/michal-mik/Projects/agpt-xenon/build\n  echo Build\\ all\\ projects\nfi\nif test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :\n  cd /Users/michal-mik/Projects/agpt-xenon/build\n  echo Build\\ all\\ projects\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1F5074327804417ACBCD07A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96F5C8E1842D4ADF9C0EA20B /* Engine.cpp in Sources */,
+				FF431145ECCA40248D011838 /* TextureManager.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAD640054A7349C79AE96FDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AD2F72FBFAB4C7FBA3175BA /* ShipPawn.cpp in Sources */,
+				BFAA197F99C94917A2B1C182 /* XenonGame.cpp in Sources */,
+				911FFF4AEE454C46BB50242C /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11A7CA0BF93C4330B729ACDE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE4D801B596A10BF205FFA08 /* xenon_engine */;
+			targetProxy = C191E5A56146473BABDA6354 /* PBXContainerItemProxy */;
+		};
+		306A84D33A1143E392F51DE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0064144DF62DC8C072E514F9 /* ZERO_CHECK */;
+			targetProxy = 476DAB2C595042D78CEFAF8E /* PBXContainerItemProxy */;
+		};
+		36A66B4624CE42489A9E0199 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE4D801B596A10BF205FFA08 /* xenon_engine */;
+			targetProxy = 579DA8C2E9E54A7982B57322 /* PBXContainerItemProxy */;
+		};
+		59111FE4564143E6AB81B182 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0064144DF62DC8C072E514F9 /* ZERO_CHECK */;
+			targetProxy = DAC7FD2A2FA44BDD901EB649 /* PBXContainerItemProxy */;
+		};
+		5C4DF4AC5C4B4A75A058DFD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0064144DF62DC8C072E514F9 /* ZERO_CHECK */;
+			targetProxy = FCE63847BF09442FB68C3990 /* PBXContainerItemProxy */;
+		};
+		6957685C519B40F5A53497FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3F1F25A9F30E7DF13E693E9 /* xenon_game */;
+			targetProxy = 1F0B79962C274E1C97B0E1C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00E62B44CC6D42F7879D4FC7 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		04BE6E83175B40A9B128B9A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/engine/Release";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michal-mik/Projects/agpt-xenon/engine/include",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++20'",
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-F",
+					/Library/Frameworks,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = xenon_engine;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(inherited)",
+				);
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					"$(inherited)",
+				);
+				TARGET_TEMP_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/build/xenon_engine.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		17EC17F07ACF48658EB16ADE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/game/Debug";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michal-mik/Projects/agpt-xenon/engine/include",
+					"/Users/michal-mik/Projects/agpt-xenon/game/src",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/Library/Frameworks,
+					/opt/homebrew/lib,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"'-std=gnu++20'",
+					"-F",
+					/Library/Frameworks,
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/michal-mik/Projects/agpt-xenon/build/engine/Debug/libxenon_engine.a",
+					/Library/Frameworks/SDL3.framework/SDL3,
+					/opt/homebrew/lib/libbox2d.3.1.1.dylib,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = xenon_game;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(inherited)",
+				);
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					"$(inherited)",
+				);
+				TARGET_TEMP_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/build/xenon_game.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		27A3F2BE5C9C4CA2B7142B73 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		28493B44BE43466E99045424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SYMROOT = "/Users/michal-mik/Projects/agpt-xenon/build/build";
+			};
+			name = Debug;
+		};
+		39539CA8A85742A5B05D122A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/game/Release";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michal-mik/Projects/agpt-xenon/engine/include",
+					"/Users/michal-mik/Projects/agpt-xenon/game/src",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/Library/Frameworks,
+					/opt/homebrew/lib,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++20'",
+					"-F",
+					/Library/Frameworks,
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/michal-mik/Projects/agpt-xenon/build/engine/Release/libxenon_engine.a",
+					/Library/Frameworks/SDL3.framework/SDL3,
+					/opt/homebrew/lib/libbox2d.3.1.1.dylib,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = xenon_game;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(inherited)",
+				);
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					"$(inherited)",
+				);
+				TARGET_TEMP_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/build/xenon_game.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		489DFD25D5DD46C3AAFD1F2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		5A18325506D24FED88430DD3 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/engine/MinSizeRel";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michal-mik/Projects/agpt-xenon/engine/include",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++20'",
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-F",
+					/Library/Frameworks,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = xenon_engine;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(inherited)",
+				);
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					"$(inherited)",
+				);
+				TARGET_TEMP_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/build/xenon_engine.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		60261D359BB54B80A095672A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/engine/RelWithDebInfo";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michal-mik/Projects/agpt-xenon/engine/include",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++20'",
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-F",
+					/Library/Frameworks,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = xenon_engine;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(inherited)",
+				);
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					"$(inherited)",
+				);
+				TARGET_TEMP_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/build/xenon_engine.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		66363BBB5F7F4BA9A656408D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/game/RelWithDebInfo";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michal-mik/Projects/agpt-xenon/engine/include",
+					"/Users/michal-mik/Projects/agpt-xenon/game/src",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/Library/Frameworks,
+					/opt/homebrew/lib,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++20'",
+					"-F",
+					/Library/Frameworks,
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/michal-mik/Projects/agpt-xenon/build/engine/RelWithDebInfo/libxenon_engine.a",
+					/Library/Frameworks/SDL3.framework/SDL3,
+					/opt/homebrew/lib/libbox2d.3.1.1.dylib,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = xenon_game;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(inherited)",
+				);
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					"$(inherited)",
+				);
+				TARGET_TEMP_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/build/xenon_game.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		68A17645A4FB4BEE8F2EC021 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/michal-mik/Projects/agpt-xenon/build/build";
+			};
+			name = RelWithDebInfo;
+		};
+		7932A82523E04EBEA2C5B49B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/michal-mik/Projects/agpt-xenon/build/build";
+			};
+			name = MinSizeRel;
+		};
+		826B82F710CC451282FE345C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = "/Users/michal-mik/Projects/agpt-xenon/build/build";
+			};
+			name = Release;
+		};
+		89C10D7C15ED4F2788DFCDDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Release;
+		};
+		A16DEA3FCAF544A39DBC63DB /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = RelWithDebInfo;
+		};
+		AF9ABCD94F9E46AB808C8647 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		B009E9E804234D31BD82173A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/game/MinSizeRel";
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michal-mik/Projects/agpt-xenon/engine/include",
+					"/Users/michal-mik/Projects/agpt-xenon/game/src",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					/Library/Frameworks,
+					/opt/homebrew/lib,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++20'",
+					"-F",
+					/Library/Frameworks,
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"/Users/michal-mik/Projects/agpt-xenon/build/engine/MinSizeRel/libxenon_engine.a",
+					/Library/Frameworks/SDL3.framework/SDL3,
+					/opt/homebrew/lib/libbox2d.3.1.1.dylib,
+					"$(inherited)",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = xenon_game;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(inherited)",
+				);
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					"$(inherited)",
+				);
+				TARGET_TEMP_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/build/xenon_game.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		C52C7E0A966A401B9FCD3BA5 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = MinSizeRel;
+		};
+		C75973ACCE624350BA46E0EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = " $(inherited)";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+		ECE091282F2F4D569CD1DEB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/engine/Debug";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michal-mik/Projects/agpt-xenon/engine/include",
+					"$(inherited)",
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"'-std=gnu++20'",
+					"-Wall",
+					"-Wextra",
+					"-Wpedantic",
+					"-F",
+					/Library/Frameworks,
+				);
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = xenon_engine;
+				SECTORDER_FLAGS = "";
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks,
+					"$(inherited)",
+				);
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					/opt/homebrew/include,
+					"$(inherited)",
+				);
+				TARGET_TEMP_DIR = "/Users/michal-mik/Projects/agpt-xenon/build/build/xenon_engine.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = "$(inherited)";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		281D53F0042E4F4A878BA1B9 /* Build configuration list for PBXProject "AGPT_Project1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28493B44BE43466E99045424 /* Debug */,
+				826B82F710CC451282FE345C /* Release */,
+				7932A82523E04EBEA2C5B49B /* MinSizeRel */,
+				68A17645A4FB4BEE8F2EC021 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		43568F5CFBD540DA94D5359F /* Build configuration list for PBXNativeTarget "xenon_game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17EC17F07ACF48658EB16ADE /* Debug */,
+				39539CA8A85742A5B05D122A /* Release */,
+				B009E9E804234D31BD82173A /* MinSizeRel */,
+				66363BBB5F7F4BA9A656408D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7F41497E49F94C4E83E5CE26 /* Build configuration list for PBXNativeTarget "xenon_engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECE091282F2F4D569CD1DEB0 /* Debug */,
+				04BE6E83175B40A9B128B9A9 /* Release */,
+				5A18325506D24FED88430DD3 /* MinSizeRel */,
+				60261D359BB54B80A095672A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9A109530A86741BDACD62CD1 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF9ABCD94F9E46AB808C8647 /* Debug */,
+				489DFD25D5DD46C3AAFD1F2C /* Release */,
+				00E62B44CC6D42F7879D4FC7 /* MinSizeRel */,
+				27A3F2BE5C9C4CA2B7142B73 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A104F045AA32418F9E7B8827 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C75973ACCE624350BA46E0EA /* Debug */,
+				89C10D7C15ED4F2788DFCDDE /* Release */,
+				C52C7E0A966A401B9FCD3BA5 /* MinSizeRel */,
+				A16DEA3FCAF544A39DBC63DB /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 54436266C54E4199B910D170 /* Project object */;
+}

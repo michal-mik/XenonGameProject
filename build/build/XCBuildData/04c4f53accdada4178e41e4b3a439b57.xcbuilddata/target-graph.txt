@@ -1,0 +1,7 @@
+Target dependency graph (3 targets)
+Target 'xenon_game' in project 'AGPT_Project1'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'AGPT_Project1'
+➜ Explicit dependency on target 'xenon_engine' in project 'AGPT_Project1'
+Target 'xenon_engine' in project 'AGPT_Project1'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'AGPT_Project1'
+Target 'ZERO_CHECK' in project 'AGPT_Project1' (no dependencies)
