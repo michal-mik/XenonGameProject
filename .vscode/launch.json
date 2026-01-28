@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Xenon Game",
+            "type": "cppdbg", 
+            "request": "launch",
+            // IMPORTANT: Point this to where your executable is built. 
+            // CMake usually puts it in build/game/ or build/game/Debug/
+            // Adjust the path below if your build folder structure is different.
+            "program": "${workspaceFolder}/build/game/Debug/xenon_game", 
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}", // <--- THIS FIXES THE TEXTURE LOADING
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb", // Use "gdb" on Linux/Windows, "lldb" on macOS
+            "preLaunchTask": "CMake: build"
+        }
+    ]
+}

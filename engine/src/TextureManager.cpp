@@ -1,6 +1,6 @@
 #include "Engine/TextureManager.hpp"
-
 #include <iostream>
+#include <SDL3/SDL.h> // Ensure SDL is included
 
 TextureManager::~TextureManager()
 {
@@ -31,8 +31,8 @@ SDL_Texture* TextureManager::load(const std::string& path)
         return nullptr;
     }
 
-    const SDL_PixelFormatDetails* fmt =
-        SDL_GetPixelFormatDetails(surface->format);
+    // Get pixel format details
+    const SDL_PixelFormatDetails* fmt = SDL_GetPixelFormatDetails(surface->format);
     if (!fmt) {
         std::cerr << "[TextureManager] SDL_GetPixelFormatDetails failed: "
                   << SDL_GetError() << "\n";
@@ -40,13 +40,13 @@ SDL_Texture* TextureManager::load(const std::string& path)
         return nullptr;
     }
 
-    // Magenta = transparent
-    Uint32 colorkey = SDL_MapRGB(fmt, nullptr, 255, 0, 255);
+    // FIX: Pass the surface's palette. If it's an 8-bit BMP, MapRGB needs the palette to find the index.
+    // Magenta (255, 0, 255) = Transparent
+    Uint32 colorkey = SDL_MapRGB(fmt, SDL_GetSurfacePalette(surface), 255, 0, 255);
+    
     if (!SDL_SetSurfaceColorKey(surface, true, colorkey)) {
-        std::cerr << "[TextureManager] SDL_SetSurfaceColorKey failed: "
-                  << SDL_GetError() << "\n";
-        SDL_DestroySurface(surface);
-        return nullptr;
+        // Not always a fatal error, but good to log
+        // std::cerr << "[TextureManager] Warning: SDL_SetSurfaceColorKey failed or not needed: " << SDL_GetError() << "\n";
     }
 
     SDL_Texture* tex = SDL_CreateTextureFromSurface(m_renderer, surface);
@@ -56,6 +56,9 @@ SDL_Texture* TextureManager::load(const std::string& path)
         SDL_DestroySurface(surface);
         return nullptr;
     }
+
+    // Optional: Set texture blend mode to handle alpha blending if the bmp had alpha
+    SDL_SetTextureBlendMode(tex, SDL_BLENDMODE_BLEND);
 
     SDL_DestroySurface(surface);
 

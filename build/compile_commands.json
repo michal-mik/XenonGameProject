@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/build",
+  "command": "/usr/bin/clang++ -I\"/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/engine/include\" -isystem /opt/homebrew/include -iframework /Library/Frameworks -g -std=gnu++20 -arch arm64 -Wall -Wextra -Wpedantic -F /Library/Frameworks -o engine/CMakeFiles/xenon_engine.dir/src/Engine.cpp.o -c \"/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/engine/src/Engine.cpp\"",
+  "file": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/engine/src/Engine.cpp",
+  "output": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/build/engine/CMakeFiles/xenon_engine.dir/src/Engine.cpp.o"
+},
+{
+  "directory": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/build",
+  "command": "/usr/bin/clang++ -I\"/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/engine/include\" -isystem /opt/homebrew/include -iframework /Library/Frameworks -g -std=gnu++20 -arch arm64 -Wall -Wextra -Wpedantic -F /Library/Frameworks -o engine/CMakeFiles/xenon_engine.dir/src/TextureManager.cpp.o -c \"/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/engine/src/TextureManager.cpp\"",
+  "file": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/engine/src/TextureManager.cpp",
+  "output": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/build/engine/CMakeFiles/xenon_engine.dir/src/TextureManager.cpp.o"
+},
+{
+  "directory": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/build",
+  "command": "/usr/bin/clang++ -I\"/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/engine/include\" -I\"/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/game/src\" -isystem /opt/homebrew/include -g -std=gnu++20 -arch arm64 -iframework /Library/Frameworks  -F /Library/Frameworks -o game/CMakeFiles/xenon_game.dir/src/main.cpp.o -c \"/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/game/src/main.cpp\"",
+  "file": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/game/src/main.cpp",
+  "output": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/build/game/CMakeFiles/xenon_game.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/build",
+  "command": "/usr/bin/clang++ -I\"/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/engine/include\" -I\"/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/game/src\" -isystem /opt/homebrew/include -g -std=gnu++20 -arch arm64 -iframework /Library/Frameworks  -F /Library/Frameworks -o game/CMakeFiles/xenon_game.dir/src/XenonGame.cpp.o -c \"/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/game/src/XenonGame.cpp\"",
+  "file": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/game/src/XenonGame.cpp",
+  "output": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/build/game/CMakeFiles/xenon_game.dir/src/XenonGame.cpp.o"
+},
+{
+  "directory": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/build",
+  "command": "/usr/bin/clang++ -I\"/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/engine/include\" -I\"/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/game/src\" -isystem /opt/homebrew/include -g -std=gnu++20 -arch arm64 -iframework /Library/Frameworks  -F /Library/Frameworks -o game/CMakeFiles/xenon_game.dir/src/ShipPawn.cpp.o -c \"/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/game/src/ShipPawn.cpp\"",
+  "file": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/game/src/ShipPawn.cpp",
+  "output": "/Users/michal-mik/Git Repos/agpt-project/XenonGameProject/build/game/CMakeFiles/xenon_game.dir/src/ShipPawn.cpp.o"
+}
+]

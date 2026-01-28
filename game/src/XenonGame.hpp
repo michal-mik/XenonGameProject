@@ -2,11 +2,16 @@
 
 #include "Engine/Engine.hpp"
 #include "ShipPawn.hpp"
-
 #include <SDL3/SDL.h>
-
 #include <vector>
-#include <algorithm>
+#include <string>
+
+enum class GameState {
+    Playing,
+    BossFight,
+    GameOver,
+    Victory
+};
 
 class XenonGame : public IGame {
 public:
@@ -19,139 +24,176 @@ public:
     void render(SDL_Renderer* renderer) override;
 
 private:
-    EngineContext m_ctx{};  // window, renderer, world, size
+    EngineContext m_ctx{};
+    GameState m_gameState = GameState::Playing;
 
-    // --- Ship ----------------------------------------------------
+    // --- Ship ---
     ShipPawn m_ship;
-
     static constexpr int SHIP_FRAME_WIDTH  = 64;
     static constexpr int SHIP_FRAME_HEIGHT = 64;
+    
+    int m_weaponLevel = 0; 
+    int m_lives = 3;
+    int m_score = 0;
+    
+    // Shield
+    bool m_hasShield = false;
+    float m_shieldTimer = 0.0f;
+    static constexpr float SHIELD_DURATION = 10.0f;
 
-    // --- Missiles -----------------------------------------------
+    // --- Missiles ---
     struct Missile {
-        SDL_FRect rect{};   // position + size
-        float     speedY = 0.0f;
-        bool      alive  = false;
+        SDL_FRect rect{};
+        SDL_FRect src{}; // Source rect for animation/frame selection
+        float speedY = 0.0f;
+        float speedX = 0.0f;
+        bool alive = false;
     };
-
     std::vector<Missile> m_missiles;
+    SDL_Texture* m_missileTexture = nullptr;
+    float m_missileCooldown = 0.0f;
 
-
-    SDL_Texture*        m_missileTexture = nullptr;
-    float               m_missileCooldown = 0.0f;
-    static constexpr float MISSILE_COOLDOWN = 0.15f; // seconds
-
-    void fireMissile();
-    void updateMissiles(float dt);
-    void renderMissiles(SDL_Renderer* renderer);
-
-    // --- Enemies (Loners + Rushers) --------------------------------
+    // --- Enemies ---
     enum class EnemyType { Loner, Rusher };
-
     struct Enemy {
         EnemyType type = EnemyType::Loner;
         SDL_FRect src{};
         SDL_FRect rect{};
-        float     speedX   = 0.0f;
-        float     speedY   = 0.0f;
-        bool      alive    = false;
-        float     shootTimer = 0.0f; // for loner bullets
+        float speedX = 0.0f;
+        float speedY = 0.0f;
+        int hp = 1;
+        bool alive = false;
+        float shootTimer = 0.0f;
     };
-
-    SDL_Texture*       m_lonerTexture    = nullptr;
-    SDL_Texture*       m_rusherTexture   = nullptr;
+    SDL_Texture* m_lonerTexture = nullptr;
+    SDL_Texture* m_rusherTexture = nullptr;
     std::vector<Enemy> m_enemies;
-
-    float m_lonerSpawnTimer  = 0.0f;
+    float m_lonerSpawnTimer = 0.0f;
     float m_rusherSpawnTimer = 0.0f;
 
-    static constexpr float LONER_SPAWN_INTERVAL   = 2.0f; // seconds
-    static constexpr float RUSHER_SPAWN_INTERVAL  = 5.0f; // seconds
-    static constexpr int   LONER_FRAME_WIDTH      = 64;
-    static constexpr int   LONER_FRAME_HEIGHT     = 64;
-    static constexpr int   RUSHER_FRAME_WIDTH     = 64;
-    static constexpr int   RUSHER_FRAME_HEIGHT    = 64;
+    // --- Enemy Projectiles ---
+    struct EnemyProjectile {
+        SDL_FRect rect{};
+        float speedY = 0.0f;
+        float speedX = 0.0f;
+        bool alive = false;
+    };
+    SDL_Texture* m_enemyProjectileTexture = nullptr;
+    std::vector<EnemyProjectile> m_enemyProjectiles;
+
+    // --- Asteroids ---
+    enum class AsteroidSize { Small, Medium, Large };
+    struct Asteroid {
+        AsteroidSize size;
+        SDL_FRect rect;
+        SDL_FRect src;
+        float speedY;
+        int hp;
+        bool alive;
+        // Animation
+        int currentFrame;
+        int totalFrames;
+        float animTimer;
+    };
+    SDL_Texture* m_asteroidSTexture = nullptr;
+    SDL_Texture* m_asteroidMTexture = nullptr;
+    SDL_Texture* m_asteroidGTexture = nullptr;
+    std::vector<Asteroid> m_asteroids;
+    float m_asteroidSpawnTimer = 0.0f;
+
+    // --- Boss ---
+    struct Boss {
+        SDL_FRect rect;
+        int hp;
+        int maxHp;
+        float shootTimer;
+        bool active;
+        float dirX;
+    } m_boss;
+    SDL_Texture* m_bossTexture = nullptr;
+
+    // --- PowerUps ---
+    enum class PowerUpType { Weapon, Shield, Score, Life };
+    struct PowerUp {
+        PowerUpType type;
+        SDL_FRect rect;
+        SDL_FRect src;
+        float speedY;
+        bool alive;
+        int currentFrame;
+        int totalFrames;
+        float animTimer;
+    };
+    SDL_Texture* m_puWeaponTexture = nullptr;
+    SDL_Texture* m_puShieldTexture = nullptr;
+    SDL_Texture* m_puScoreTexture = nullptr;
+    SDL_Texture* m_puLifeTexture = nullptr;
+    std::vector<PowerUp> m_powerups;
+
+    // --- Explosions ---
+    struct Explosion {
+        SDL_FRect src;
+        SDL_FRect dst;
+        float frameTime;
+        int currentFrame;
+        int totalFrames;
+        bool alive;
+    };
+    SDL_Texture* m_explosionTexture = nullptr;
+    std::vector<Explosion> m_explosions;
+
+    // --- Dust / Background ---
+    struct DustParticle {
+        SDL_Texture* texture = nullptr;
+        SDL_FRect rect{};
+        SDL_FRect src{}; // Added src to prevent multiplying
+        float speed = 0.0f;
+    };
+    std::vector<DustParticle> m_dustParticles;
+    SDL_Texture* m_galaxyTexture = nullptr;
+
+    // --- Methods ---
+    void fireMissile();
+    void updateMissiles(float dt);
+    void renderMissiles(SDL_Renderer* renderer);
 
     void spawnLoner();
     void spawnRusher();
     void updateEnemies(float dt);
     void renderEnemies(SDL_Renderer* renderer);
 
-    // --- Enemy projectiles ----------------------------------------
-    struct EnemyProjectile {
-        SDL_FRect rect{};
-        float     speedY = 0.0f;
-        bool      alive  = false;
-    };
-
-    SDL_Texture*                 m_enemyProjectileTexture = nullptr;
-    std::vector<EnemyProjectile> m_enemyProjectiles;
-
-    static constexpr float ENEMY_PROJECTILE_SPEED = 200.0f;
-
-    void fireEnemyProjectile(const Enemy& from);
+    void fireEnemyProjectile(const SDL_FRect& sourceRect, float speedY, float speedX = 0.0f);
     void updateEnemyProjectiles(float dt);
     void renderEnemyProjectiles(SDL_Renderer* renderer);
 
-    // collisions
-    static bool rectsOverlap(const SDL_FRect& a, const SDL_FRect& b);
-    void handleMissileEnemyCollisions();
-    void handleEnemyProjectileShipCollisions();
+    void spawnAsteroid();
+    void updateAsteroids(float dt);
+    void renderAsteroids(SDL_Renderer* renderer);
 
-    // --- Explosions ---------------------------------------------
-    struct Explosion {
-        SDL_FRect src;
-        SDL_FRect dst;
-        float frameTime;
-        int   currentFrame;
-        int   totalFrames;
-        bool  alive;
-    };
+    void spawnBoss();
+    void updateBoss(float dt);
+    void renderBoss(SDL_Renderer* renderer);
 
-    SDL_Texture*          m_explosionTexture = nullptr;
-    std::vector<Explosion> m_explosions;
-
-    static constexpr int   EXPLOSION_FRAME_SIZE   = 64;  // explode64.bmp tile
-    static constexpr int   EXPLOSION_COLUMNS      = 8;   // 8 frames per row
-    static constexpr int   EXPLOSION_TOTAL_FRAMES = EXPLOSION_COLUMNS;
-    static constexpr float EXPLOSION_FPS          = 30.0f;
+    void spawnPowerUp(float x, float y);
+    void updatePowerUps(float dt);
+    void renderPowerUps(SDL_Renderer* renderer);
+    void applyPowerUp(PowerUpType type);
 
     void spawnExplosion(float cx, float cy);
     void updateExplosions(float dt);
     void renderExplosions(SDL_Renderer* renderer);
 
-    // --- gamepad state -------------------------------------------------
-    SDL_Gamepad* m_gamepad         = nullptr;
-    bool         m_gamepadConnected = false;
-    float        m_gamepadDeadzone  = 0.25f; // normalized deadzone
-
-
-    // --- Background dust (level) --------------------------------------
-    struct DustParticle {
-        SDL_Texture* texture = nullptr;
-        SDL_FRect    rect{};
-        float        speed = 0.0f;
-    };
-
-    std::vector<DustParticle> m_dustParticles;
-
     void initDustBackground();
     void updateDust(float dt);
     void renderDust(SDL_Renderer* renderer);
 
-    // --- Level / score --------------------------------------------
-    struct LevelConfig {
-        int   killTarget;
-        float lonerInterval;
-        float rusherInterval;
-    };
+    void checkCollisions();
+    void onPlayerHit();
+    bool rectsOverlap(const SDL_FRect& a, const SDL_FRect& b);
 
-    int         m_currentLevel     = 0;
-    int         m_killsInLevel     = 0;
-    int         m_score            = 0;
-    int         m_lives            = 3;
-    LevelConfig m_levelConfig{10, 2.0f, 5.0f};
-
-    void setupLevel(int index);
-    void onEnemyKilled();
+    // HUD
+    SDL_Texture* m_fontTexture = nullptr;
+    SDL_Texture* m_lifeIconTexture = nullptr;
+    void drawText(SDL_Renderer* r, float x, float y, const std::string& text);
+    void renderHUD(SDL_Renderer* r);
 };
