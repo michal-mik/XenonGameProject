@@ -196,4 +196,7 @@ private:
     SDL_Texture* m_lifeIconTexture = nullptr;
     void drawText(SDL_Renderer* r, float x, float y, const std::string& text);
     void renderHUD(SDL_Renderer* r);
+
+    void renderText(SDL_Renderer* renderer, const std::string& text, float x, float y);
+    bool m_gameOver = false;
 };

@@ -6,6 +6,7 @@
 #include <random>
 #include <string>
 #include <algorithm>
+#include <cmath>
 
 namespace {
     constexpr float MISSILE_WIDTH  = 8.0f;
@@ -24,6 +25,8 @@ XenonGame::~XenonGame() {}
 bool XenonGame::init(const EngineContext& ctx)
 {
     m_ctx = ctx;
+    m_fontTexture = m_ctx.textures->load("graphics/Font8x8.bmp");
+
     if (!m_ctx.textures) return false;
 
     // --- Load Textures ---
@@ -198,6 +201,49 @@ void XenonGame::render(SDL_Renderer* r)
     renderEnemyProjectiles(r);
     renderExplosions(r);
     renderHUD(r);
+
+    renderDust(r);
+    if (!m_gameOver) m_ship.render(r);
+    renderEnemies(r);
+    renderEnemyProjectiles(r);
+    renderMissiles(r);
+    renderExplosions(r);
+
+    std::string scoreStr = "SCORE: " + std::to_string(m_score);
+    renderText(r, scoreStr, 10.0f, 10.0f);
+
+    if (m_gameOver) {
+        std::string overMsg = "GAME OVER";
+        // Jednoduché vycentrovanie (ak je okno 640 široké)
+        float cx = (m_ctx.width / 2.0f) - ((overMsg.length() * 8.0f) / 2.0f);
+        float cy = (m_ctx.height / 2.0f) - 4.0f;
+        renderText(r, overMsg, cx, cy);
+    }    
+}
+
+// Helper to render text using a font texture (independent of XenonGame class)
+static void renderTextHelper(SDL_Renderer* renderer, SDL_Texture* fontTexture, const std::string& text, float x, float y, float scale) {
+    if (!fontTexture) return;
+
+    for (size_t i = 0; i < text.length(); ++i) {
+        unsigned char c = static_cast<unsigned char>(text[i]);
+        // Standard ASCII offset: space is index 32
+        int charIdx = static_cast<int>(c) - 32;
+        if (charIdx < 0) charIdx = 0;
+
+        // Assume font sheet is 16xN characters of 8x8 tiles
+        SDL_FRect src = { static_cast<float>((charIdx % 16) * 8), static_cast<float>((charIdx / 16) * 8), 8.0f, 8.0f };
+        
+        // Round coordinates to avoid sub-pixel blurring
+        SDL_FRect dst = { 
+            std::floor(x + (i * 8 * scale)), 
+            std::floor(y), 
+            8.0f * scale, 
+            8.0f * scale 
+        };
+
+        SDL_RenderTexture(renderer, fontTexture, &src, &dst);
+    }
 }
 
 // --- Logic ---
@@ -454,7 +500,7 @@ void XenonGame::applyPowerUp(PowerUpType type) {
 
 // Collisions
 bool XenonGame::rectsOverlap(const SDL_FRect& a, const SDL_FRect& b) {
-    return !(a.x > b.x + b.w || a.x + a.w < b.x || a.y > b.y + b.h || a.y + a.h < b.y);
+    return SDL_HasRectIntersectionFloat(&a, &b);
 }
 
 void XenonGame::checkCollisions() {
@@ -559,7 +605,6 @@ void XenonGame::initDustBackground() {
             DustParticle p;
             p.texture = dusts[i];
             p.rect = {randomFloat(0, m_ctx.width), randomFloat(0, m_ctx.height), 32.0f, 32.0f};
-            // FIX: Ensure src is valid even for single image
             p.src = {0, 0, 32, 32}; 
             p.speed = 50.0f + i*20.0f;
             m_dustParticles.push_back(p);
@@ -612,4 +657,30 @@ void XenonGame::renderHUD(SDL_Renderer* r) {
 
     if(m_gameState == GameState::GameOver) drawText(r, m_ctx.width/2-80, m_ctx.height/2, "GAME OVER - PRESS R");
     if(m_gameState == GameState::Victory) drawText(r, m_ctx.width/2-80, m_ctx.height/2, "VICTORY! - PRESS R");
+}
+
+void XenonGame::renderText(SDL_Renderer* renderer, const std::string& text, float x, float y)
+{
+    if (!m_fontTexture) return;
+
+    for (size_t i = 0; i < text.length(); ++i) {
+        char c = text[i];
+        // Predpoklad: Font začína od medzery (ASCII 32) a má mriežku 8x8
+        int index = static_cast<int>(c) - 32;
+        if (index < 0) index = 0;
+
+        SDL_FRect src;
+        src.x = static_cast<float>(index * 8);
+        src.y = 0.0f;
+        src.w = 8.0f;
+        src.h = 8.0f;
+
+        SDL_FRect dst;
+        dst.x = std::floor(x + (i * 8)); // floor je dôležitý proti rozmazaniu
+        dst.y = std::floor(y);
+        dst.w = 8.0f;
+        dst.h = 8.0f;
+
+        SDL_RenderTexture(renderer, m_fontTexture, &src, &dst);
+    }
 }

@@ -48,6 +48,8 @@ bool Engine::init()
 
 bool Engine::initSDL()
 {
+    SDL_SetHint("SDL_HINT_RENDER_SCALE_QUALITY", "0");
+
     // include gamepads for that 5% mark later
     if (!SDL_Init(SDL_INIT_VIDEO | SDL_INIT_GAMEPAD)) {
         std::cerr << "[Engine] SDL_Init failed: " << SDL_GetError() << "\n";
@@ -154,6 +156,9 @@ void Engine::render()
     m_game.render(m_renderer);
 
     SDL_RenderPresent(m_renderer);
+
+    // Set nearest scaling for sharp pixel art
+    SDL_SetHint("SDL_RENDER_SCALE_QUALITY", "0");
 }
 
 void Engine::shutdown()

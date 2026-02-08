@@ -35,9 +35,13 @@ private:
     int   m_currentFrame = 3;   // left=1, idle=3, right=5
 
     float m_speed = 300.0f;
+    float m_animFrame = 3.0f;
 
     bool m_moveLeft  = false;
     bool m_moveRight = false;
     bool m_moveUp    = false;
     bool m_moveDown  = false;
+
+
+    
 };
